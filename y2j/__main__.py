@@ -13,7 +13,7 @@ def main():
     args = parser.parse_args()
 
     indent = 2 if args.pretty else None
-    separators = (':', ',') if not args.pretty else None
+    separators = (',', ':') if not args.pretty else None
 
     if args.file is not None:
         with open(args.file, 'r') as stream:
