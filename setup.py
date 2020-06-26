@@ -9,7 +9,7 @@ with open('README.md', 'r') as fh:
 
 setup(
     name='y2j',
-    version='0.0.2',
+    version='0.0.3',
     author='Neal Ormsbee',
     author_email='neal.ormsbee@gmail.com',
     description='A CLI tool for converting YAML to JSON.',
