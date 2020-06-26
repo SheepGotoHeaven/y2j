@@ -8,12 +8,16 @@ import yaml
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('file', nargs='?', help='File to translate. Defaults to stdin.', default=None)
-    parser.add_argument('-p', '--pretty', help='Enables pretty-printing of JSON', action='store_true')
+    parser.add_argument('file', nargs='?', default=None,
+                        help='File to translate. Defaults to stdin.')
+    parser.add_argument('-c', '--compressed', action='store_true',
+                        help='Print JSON with no superfluous whitespace.')
+    parser.add_argument('-p', '--pretty', action='store_true',
+                        help='Enables pretty-printing of JSON')
     args = parser.parse_args()
 
     indent = 2 if args.pretty else None
-    separators = (',', ':') if not args.pretty else None
+    separators = (',', ':') if not args.pretty and args.compressed else None
 
     if args.file is not None:
         with open(args.file, 'r') as stream:

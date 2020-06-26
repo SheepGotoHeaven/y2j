@@ -18,6 +18,7 @@ setup(
     url='https://github.com/SheepGotoHeaven/y2j',
     install_requires=['pyyaml'],
     packages=find_packages(),
+    license='MIT',
     zip_safe=True,
     classifiers=[
         'Programming Language :: Python :: 3',

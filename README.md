@@ -13,6 +13,7 @@ pip install y2j
 `y2j` accepts YAML data and writes the equivalent JSON to STDOUT. The YAML may be read from a named file, or from STDIN.
 
 #### Options
+* `-c`, `--compressed`: Print with no superfluous whitespace.
 * `-p`, `--pretty`: Pretty-print the JSON output
 
 
